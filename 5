@@ -1,0 +1,121 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Pense em um animal e responda às perguntas com S para Sim e N para Não");
+        
+        Console.Write("É mamífero? ");
+        char respMamifero = char.ToUpper(Console.ReadLine()[0]);
+        
+        if (respMamifero == 'S')
+        {
+            Console.Write("É quadrúpede? ");
+            char respQuadrupede = char.ToUpper(Console.ReadLine()[0]);
+            
+            if (respQuadrupede == 'S')
+            {
+                Console.Write("É carnívoro? ");
+                char respCarnivoro = char.ToUpper(Console.ReadLine()[0]);
+                
+                if (respCarnivoro == 'S')
+                {
+                    Console.WriteLine("O animal escolhido foi o leão.");
+                }
+                else
+                {
+                    Console.Write("É herbívoro? ");
+                    char respHerbivoro = char.ToUpper(Console.ReadLine()[0]);
+                    
+                    if (respHerbivoro == 'S')
+                    {
+                        Console.WriteLine("O animal escolhido foi o cavalo.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Animal não identificado.");
+                    }
+                }
+            }
+            else
+            {
+                Console.Write("É bípede? ");
+                char respBipede = char.ToUpper(Console.ReadLine()[0]);
+                
+                if (respBipede == 'S')
+                {
+                    Console.Write("É onívoro? ");
+                    char respOnivoro = char.ToUpper(Console.ReadLine()[0]);
+                    
+                    if (respOnivoro == 'S')
+                    {
+                        Console.WriteLine("O animal escolhido foi o homem.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("O animal escolhido foi o macaco.");
+                    }
+                }
+                else
+                {
+                    Console.Write("É voador? ");
+                    char respVoador = char.ToUpper(Console.ReadLine()[0]);
+                    
+                    if (respVoador == 'S')
+                    {
+                        Console.WriteLine("O animal escolhido foi o morcego.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("O animal escolhido foi a baleia.");
+                    }
+                }
+            }
+        }
+        else
+        {
+            Console.Write("É ave? ");
+            char respAve = char.ToUpper(Console.ReadLine()[0]);
+            
+            if (respAve == 'S')
+            {
+                Console.Write("É não-voadora? ");
+                char respNaoVoadora = char.ToUpper(Console.ReadLine()[0]);
+                
+                if (respNaoVoadora == 'S')
+                {
+                    Console.Write("É tropical? ");
+                    char respTropical = char.ToUpper(Console.ReadLine()[0]);
+                    
+                    if (respTropical == 'S')
+                    {
+                        Console.WriteLine("O animal escolhido foi o avestruz.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("O animal escolhido foi o pinguim.");
+                    }
+                }
+                else
+                {
+                    Console.Write("É nadadora? ");
+                    char respNadadora = char.ToUpper(Console.ReadLine()[0]);
+                    
+                    if (respNadadora == 'S')
+                    {
+                        Console.WriteLine("O animal escolhido foi o pato.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("O animal escolhido foi a águia.");
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("Animal não identificado.");
+            }
+        }
+    }
+}
