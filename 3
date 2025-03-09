@@ -1,0 +1,48 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int escolha;
+
+        Console.WriteLine("Digite um número para o dia da semana (0 para sair):");
+        escolha = int.Parse(Console.ReadLine());
+
+        while (escolha != 0)
+        {
+            switch (escolha)
+            {
+                case 1:
+                    Console.WriteLine("Domingo");
+                    break;
+                case 2:
+                    Console.WriteLine("Segunda");
+                    break;
+                case 3:
+                    Console.WriteLine("Terça");
+                    break;
+                case 4:
+                    Console.WriteLine("Quarta");
+                    break;
+                case 5:
+                    Console.WriteLine("Quinta");
+                    break;
+                case 6:
+                    Console.WriteLine("Sexta");
+                    break;
+                case 7:
+                    Console.WriteLine("Sábado");
+                    break;
+                default:
+                    Console.WriteLine("Opção inválida.");
+                    break;
+            }
+
+            Console.WriteLine("Digite um número para o dia da semana (0 para sair):");
+            escolha = int.Parse(Console.ReadLine());
+        }
+
+        Console.WriteLine("Programa encerrado.");
+    }
+}
