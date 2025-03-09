@@ -1,0 +1,41 @@
+using System;
+
+class Produto
+{
+    public string Nome { get; set; }
+    public double Preco { get; set; }
+    public int VendaMediaMensal { get; set; }
+
+    public void AtualizarPreco()
+    {
+        if (VendaMediaMensal < 500 && Preco < 30)
+        {
+            Preco *= 1.10;
+        }
+        else if (VendaMediaMensal >= 500 && Preco >= 30)
+        {
+            Preco *= 0.80;
+        }
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Produto produto = new Produto();
+
+        Console.Write("Digite o nome do produto: ");
+        produto.Nome = Console.ReadLine();
+
+        Console.Write("Digite o preço atual: ");
+        produto.Preco = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Digite a venda média mensal: ");
+        produto.VendaMediaMensal = Convert.ToInt32(Console.ReadLine());
+
+        produto.AtualizarPreco();
+
+        Console.WriteLine($"O novo preço do produto {produto.Nome} é: {produto.Preco:F2}");
+    }
+}
